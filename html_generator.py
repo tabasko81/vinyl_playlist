@@ -23,8 +23,8 @@ def generate_html(tracks: List[Tuple[str, str]], title: str = "Lista de Tracks")
     # Construir lista de items
     items_html = []
     for folder, filename in tracks:
-        item_text = f"{folder} - {filename}"
-        items_html.append(f'        <div class="track-item">{item_text}</div>')
+        item_html = f'        <div class="track-item"><span class="folder-name">{folder}</span> - <span class="file-name">{filename}</span></div>'
+        items_html.append(item_html)
     
     items_content = "\n".join(items_html)
     
@@ -84,6 +84,19 @@ def generate_html(tracks: List[Tuple[str, str]], title: str = "Lista de Tracks")
             border-bottom: none;
         }}
         
+        .folder-name {{
+            font-weight: bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }}
+        
+        .file-name {{
+            background-color: #ffff00;
+            color: #000;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: normal;
+            padding: 2px 4px;
+        }}
+        
         /* Estilos para impressão */
         @media print {{
             body {{
@@ -102,6 +115,12 @@ def generate_html(tracks: List[Tuple[str, str]], title: str = "Lista de Tracks")
             .track-item {{
                 padding: 6px 0;
                 font-size: 11pt;
+            }}
+            
+            .file-name {{
+                background-color: #ffff00;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
             }}
             
             @page {{
