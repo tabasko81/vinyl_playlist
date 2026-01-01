@@ -19,6 +19,8 @@ Aplicação desktop em Python que lê ficheiros `.m3u8`, extrai informações so
 
 ## Instalação
 
+### Opção 1: Executar com Python
+
 1. Certifique-se de que tem Python instalado:
    ```bash
    python --version
@@ -27,6 +29,31 @@ Aplicação desktop em Python que lê ficheiros `.m3u8`, extrai informações so
 2. Clone ou descarregue este projeto
 
 3. Não são necessárias dependências externas - o projeto utiliza apenas bibliotecas padrão do Python
+
+### Opção 2: Usar Executável (.exe)
+
+1. Descarregue o ficheiro `M3U8_Parser.exe` da pasta `dist/`
+2. Execute diretamente - não precisa de Python instalado!
+
+### Compilar o Executável
+
+Se quiser compilar o executável você mesmo:
+
+1. Instale PyInstaller:
+   ```bash
+   pip install pyinstaller
+   ```
+
+2. Execute o comando de compilação:
+   ```bash
+   python -m PyInstaller --onefile --windowed --name="M3U8_Parser" main.py
+   ```
+
+3. O executável estará em `dist/M3U8_Parser.exe`
+
+Ou use o script fornecido:
+- Windows: Execute `build_exe.bat`
+- Linux/Mac: Execute `bash build_exe.sh`
 
 ## Utilização
 

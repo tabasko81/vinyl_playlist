@@ -1,7 +1,10 @@
 # Este projeto utiliza apenas bibliotecas padrão do Python
-# Não são necessárias dependências externas
+# Não são necessárias dependências externas para executar
 # 
 # Bibliotecas utilizadas:
 # - tkinter (incluído no Python padrão)
 # - os, datetime, webbrowser (biblioteca padrão)
+
+# Para compilar em executável (.exe):
+pyinstaller>=6.0.0
 
