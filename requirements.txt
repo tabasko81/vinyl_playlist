@@ -1,0 +1,7 @@
+# Este projeto utiliza apenas bibliotecas padrão do Python
+# Não são necessárias dependências externas
+# 
+# Bibliotecas utilizadas:
+# - tkinter (incluído no Python padrão)
+# - os, datetime, webbrowser (biblioteca padrão)
+
